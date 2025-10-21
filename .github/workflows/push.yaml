@@ -1,0 +1,24 @@
+name: Parcel
+
+on: 
+  # Публикация приложения в DockerHub
+  push: 
+    tags:
+      - v1.**
+jobs:
+  test: 
+    runs-on: ubuntu-latest
+    container: golang:1.22
+    steps:
+      - uses: actions/checout@v4
+
+      - name: Run Unit Tests
+        run: GOOS=linux GOARCH=amd64 go test
+      
+      - name: Vet
+        run: |
+          go vet ./...
+  
+  
+    
+    

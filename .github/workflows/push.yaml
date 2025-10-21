@@ -1,10 +1,6 @@
 name: Parcel
 
-on: 
-  # Публикация приложения в DockerHub
-  push: 
-    tags:
-      - v1.**
+on: push
 jobs:
   test: 
     runs-on: ubuntu-latest

@@ -35,7 +35,7 @@ jobs:
         
       - name: Extract metadata (tags, lables) for Docker
         id: meta
-        uses: docker/metadata-actions@v5.5.1
+        uses: docker/metadata-action@v5.5.1
         with:
           images: pozdeevnikita/parcel-app
         
